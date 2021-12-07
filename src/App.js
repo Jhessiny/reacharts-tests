@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import BarChartComponent from "./charts/BarChartComponent";
+import PieChartComponent from "./charts/PieChartComponent";
+import "./App.css";
+import { Pie, PieChart } from "recharts";
 
 function App() {
+  const data = [
+    { name: "Group A", value: 400 },
+    { name: "Group B", value: 300 },
+    { name: "Group C", value: 300 },
+    { name: "Group D", value: 200 },
+    { name: "Group E", value: 278 },
+    { name: "Group F", value: 189 },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BarChartComponent />
+      <PieChartComponent />
     </div>
   );
 }
